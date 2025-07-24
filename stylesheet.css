@@ -1,152 +1,198 @@
-body{
-    margin-bottom: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 0px;  
-}
-page1footer{
-    color: white;
-    margin-top: 100px;
-    text-align: center;
-    align-content: center;
-    align-self: center;
+/* Authentic Brat Album Cover CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#page1 {
-	height:auto;
-    width:auto;
-    background: linear-gradient(black 75%, #777cdc );
-	padding-top:10%;
-    padding-bottom: 300px;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    background-color: #8ACE00;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    overflow-x: hidden;
+}
+
+.brat-container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
     width: 100%;
-    overflow:auto;
-	}
-
-
-#header{
-    align-content: center;
-    color: white;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 3vw;
-    position: relative;
 }
 
-
-#footer1{
-    font-size: 2vw;
-    color: white;
-    text-align: center;
-    font-family: monospace;
+.brat-title {
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+    text-transform: lowercase;
+    line-height: 0.85;
 }
 
-
-img{
-    width: 30%;
-    height: auto;
-    margin-right: 65%;
-    margin-bottom: -25%;
-    position: relative;
-}
- 
-
-
-.subtitles{
-    position: relative;
-    display:none;
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
-    color:aliceblue;
-    margin-left: 25%;
-    margin-bottom: 11vw;
-    margin-top: -3vw;
-    font-size: 2vw;
+.brat-links {
+    margin-bottom: 4rem;
 }
 
-
-#page2 {
-	height:auto;
-    width: auto;
-    background: linear-gradient(#777cdc, white 100% );
-	padding-top:10%;
-    text-align: center;
-	}
-
-#title{
-    text-align: center;
-    color: white;
-     font-family: 'Open Sans', sans-serif;
-    font-size: 4vw;
-
+.brat-link {
+    display: block;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
 }
 
+.brat-link:hover {
+    background-color: #000;
+    color: #8ACE00;
+    transform: scale(1.05);
+}
 
-#page3 {
-	height:auto;
-    width: auto;
-	 background-color: white;
-	padding-top:10%;
-    overflow:auto;
-    text-align: center;
-	}
+.brat-link.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 
+.brat-link.disabled:hover {
+    background-color: transparent;
+    color: #000;
+    transform: none;
+}
 
+.brat-resume {
+    border-top: 3px solid #000;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+}
 
+.brat-job {
+    margin-bottom: 2rem;
+}
 
-.skills{
-    display: inline-block;
-    height:200px;
-    width:200px;
-    border: dotted 8px;
-    border-radius: 100%;
-    background-color:white;
-    margin-bottom: 10px;
-    text-align: center;
-    font-family: monospace;
-    font-size: 24px;
-    margin-left: 50px;
-    margin-right: 50px;
-    
+.brat-job-title {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-bottom: 0.2rem;
+    text-transform: lowercase;
+}
+
+.brat-job-company {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-bottom: 0.2rem;
+    text-transform: lowercase;
+    opacity: 0.8;
+}
+
+.brat-job-date {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+    opacity: 0.6;
+}
+
+.brat-job-bullets {
+    margin-left: 1rem;
+}
+
+.brat-bullet {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-bottom: 0.5rem;
+    text-transform: lowercase;
+    opacity: 0.7;
+}
+
+.brat-education {
+    margin-bottom: 2rem;
+}
+
+.brat-job-detail {
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-bottom: 0.5rem;
+    text-transform: lowercase;
+    opacity: 0.5;
+}
+
+.brat-skills {
+    margin-bottom: 2rem;
+}
+
+.brat-skill {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    text-transform: lowercase;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+.brat-projects {
+    border-top: 3px solid #000;
+    padding-top: 2rem;
+}
+
+.brat-project-desc {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+    opacity: 0.7;
+}
+
+.brat-section-title {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 700;
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .brat-container {
+        padding: 1rem;
     }
-
-.skill_name{
-    margin-top: 40%;
-}
-
-.skills:hover{
-      color: green;
-    transform:scale(1.5);
-}
-
     
-.button{
-    font-size: 5vw;
-    border: none;
-    text-align: center;
-    align-content: center;
-    display: inline-block;
-    cursor: pointer; 
-}        
+    .brat-title {
+        margin-bottom: 2rem;
+    }
     
-
-#page3 {
-	height:auto;
-    width: auto;
-	 background-color: white;
-	padding-top:10%;
-    overflow:auto;
-    text-align: center;
-	}
-
-
-
-
-
+    .brat-links {
+        margin-bottom: 2rem;
+    }
     
-#footer3{
-    font-size: 2vw;
-    color: black;
-    text-align: center;
-    margin-bottom: 10px;
-    font-family: monospace;
+    .brat-link {
+        margin-bottom: 0.5rem;
+    }
 }
