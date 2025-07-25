@@ -12,6 +12,15 @@
     <div class="brat-container">
         <h1 class="brat-title">tyler tharp</h1>
         
+        <div class="mode-toggle-container">
+            <span class="mode-label serious">serious profile</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="mode-toggle" checked>
+                <span class="slider"></span>
+            </label>
+            <span class="mode-label brat">unserious profile</span>
+        </div>
+        
         <div class="brat-links">
             <a href="#resume" class="brat-link">resume</a>
             <a href="https://linkedin.com/in/tylertharp" target="_blank" class="brat-link">linkedin</a>
@@ -98,6 +107,33 @@
                     window.location.href = 'tel:' + phone;
                 });
             }
+            
+            // Mode toggle functionality
+            const modeToggle = document.getElementById('mode-toggle');
+            const body = document.body;
+            
+            // Load saved mode preference or default to brat mode (checked)
+            const savedMode = localStorage.getItem('websiteMode');
+            if (savedMode === 'serious') {
+                modeToggle.checked = false;
+                body.classList.add('serious-mode');
+            } else {
+                modeToggle.checked = true;
+                body.classList.remove('serious-mode');
+            }
+            
+            // Handle mode toggle
+            modeToggle.addEventListener('change', function() {
+                if (this.checked) {
+                    // Brat mode (toggle is ON)
+                    body.classList.remove('serious-mode');
+                    localStorage.setItem('websiteMode', 'brat');
+                } else {
+                    // Serious mode (toggle is OFF)
+                    body.classList.add('serious-mode');
+                    localStorage.setItem('websiteMode', 'serious');
+                }
+            });
         });
     </script>
 </body>
